@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Beer Scoresheet</title>
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+  </head>
+
+  <body>
+    <h1 id="title">Beer Scoresheet</h1>
+    <p id="description">Homebrewing competition beer evaluation form</p>
+    <form id="survey-form">
+      <div class="judge-info">
+        <label id="name-label" for="name"><strong>Judge Name: </strong></label>
+        <input id="name" type="text" placeholder="Enter your name" required />
+
+        <label id="email-label" for="email"
+          ><strong>Judge Email: </strong></label
+        >
+        <input
+          id="email"
+          type="email"
+          placeholder="Enter your email"
+          required
+        />
+        <div id="judge-status">
+          <strong>Judge Status: </strong
+          ><label class="judge-label"
+            ><input
+              type="radio"
+              name="judge-status"
+              value="Certified Judge"
+            />Certified Judge</label
+          >
+          <label class="judge-label"
+            ><input
+              type="radio"
+              name="judge-status"
+              value="Professional Brewer"
+            />Professional Brewer</label
+          >
+          <label class="judge-label"
+            ><input
+              type="radio"
+              name="judge-status"
+              value="Other"
+            />Other</label
+          >
+        </div>
+      </div>
+      <div class="beer-info">
+        <label id="dropdown-label" for="dropdown"
+          ><strong>Beer Style: </strong></label
+        >
+        <select id="dropdown" required>
+          <option value="">Choose beer style</option>
+          <option value="IPA">IPA</option>
+          <option value="Pale Ale">Pale Ale</option>
+          <option value="Pils">Pils</option>
+          <option value="Stout">Stout</option>
+          <option value="Porter">Porter</option>
+        </select>
+
+        <label id="number-label" for="number"
+          ><strong>Sample Number: </strong></label
+        >
+        <input
+          id="number"
+          type="number"
+          min="1"
+          max="15"
+          placeholder="Enter #"
+          required
+        />
+      </div>
+      <hr />
+      <p id="dd">
+        <strong>Descriptor Definitions</strong> (Check all that apply):
+      </p>
+      <div id="descriptors">
+        <label
+          ><input class="descriptors" type="checkbox" value="Acetaldehyde" />
+          <strong>Acetaldehyde</strong>
+          <em>– Green apple-like aroma and flavor</em></label
+        >
+        <label
+          ><input class="descriptors" type="checkbox" value="Alcoholic" />
+          <strong>Alcoholic</strong>
+          <em
+            >– The aroma, flavor, and warming effect of ethanol and higher
+            alcohols</em
+          ></label
+        >
+        <label
+          ><input class="descriptors" type="checkbox" value="Astringent" />
+          <strong>Astringent</strong>
+          <em
+            >– Puckering, lingering harshness and/or dryness in the
+            finish/aftertaste</em
+          ></label
+        >
+        <label
+          ><input class="descriptors" type="checkbox" value="Diacetyl" />
+          <strong>Diacetyl</strong>
+          <em
+            >– Artificial butter, butterscotch, or toffee aroma and flavor</em
+          ></label
+        >
+        <label
+          ><input class="descriptors" type="checkbox" value="DMS" />
+          <strong>DMS</strong>
+          <em
+            >– At low levels a sweet, cooked or canned corn-like aroma and
+            flavor</em
+          ></label
+        >
+        <label
+          ><input class="descriptors" type="checkbox" value="Estery" />
+          <strong>Estery</strong>
+          <em>– Aroma and/or flavor of any ester</em></label
+        >
+        <label
+          ><input class="descriptors" type="checkbox" value="Grassy" />
+          <strong>Grassy</strong>
+          <em>– Aroma/flavor of fresh-cut grass or green leaves</em></label
+        >
+        <label
+          ><input class="descriptors" type="checkbox" value="Light-Struck" />
+          <strong>Light-Struck</strong>
+          <em>– Similar to the aroma of a skunk</em></label
+        >
+        <label
+          ><input class="descriptors" type="checkbox" value="Metallic" />
+          <strong>Metallic</strong>
+          <em>– Tinny, coiny, copper, iron, or blood-like flavor</em></label
+        >
+        <label
+          ><input class="descriptors" type="checkbox" value="Musty" />
+          <strong>Musty</strong>
+          <em>– Stale, musty, or moldy aromas/flavors</em></label
+        >
+        <label
+          ><input class="descriptors" type="checkbox" value="Oxidized" />
+          <strong>Oxidized</strong>
+          <em
+            >– Any one or combination of stale, winy/vinous, cardboard, papery,
+            or sherry-like aromas and flavors</em
+          ></label
+        >
+        <label
+          ><input class="descriptors" type="checkbox" value="Phenolic" />
+          <strong>Phenolic</strong>
+          <em
+            >– Spicy (clove, pepper), smoky, plastic, plastic adhesive strip,
+            and/or medicinal (chlorophenolic)</em
+          ></label
+        >
+        <label
+          ><input class="descriptors" type="checkbox" value="Solvent" />
+          <strong>Solvent</strong>
+          <em>– Similar to acetone or lacquer thinner aromas</em></label
+        >
+        <label
+          ><input class="descriptors" type="checkbox" value="Sour/Acidic" />
+          <strong>Sour/Acidic</strong>
+          <em>– Tartness in aroma and flavor</em></label
+        >
+        <label
+          ><input class="descriptors" type="checkbox" value="Sulfur" />
+          <strong>Sulfur</strong>
+          <em>– The aroma of rotten eggs or burning matches</em></label
+        >
+        <label
+          ><input class="descriptors" type="checkbox" value="Vegetal" />
+          <strong>Vegetal</strong>
+          <em>– Cooked, canned, or rotten vegetable aroma and flavor</em></label
+        >
+        <label
+          ><input class="descriptors" type="checkbox" value="Yeasty" />
+          <strong>Yeasty</strong>
+          <em>– A bready, sulfury or yeast-like aroma or flavor</em></label
+        >
+      </div>
+      <hr />
+      <div>
+        <label class="comments" for="aroma">Aroma</label>
+        <textarea
+          id="aroma"
+          placeholder="Comment on malt, hops, esters, and other aromatics"
+          required
+        ></textarea>
+      </div>
+      <div id="comments">
+        <label class="comments" for="appearance">Appearance</label>
+        <textarea
+          id="appearance"
+          placeholder="Comment on color, clarity, and head (retention, color, and texture)"
+          required
+        ></textarea>
+      </div>
+      <div>
+        <label class="comments" for="flavor">Flavor</label>
+        <textarea
+          id="flavor"
+          placeholder="Comment on malt, hops, fermentation characteristics, balance, finish/aftertaste, and other flavor characteristics"
+          required
+        ></textarea>
+      </div>
+      <div>
+        <label class="comments" for="mouthfeel">Mouthfeel</label>
+        <textarea
+          id="mouthfeel"
+          placeholder="Comment on body, carbonation, warmth, creaminess, astringency, and other palate sensations"
+          required
+        ></textarea>
+      </div>
+      <div>
+        <label class="comments" for="overall-impression"
+          >Overall Impression</label
+        >
+        <textarea
+          id="overall-impression"
+          placeholder="Comment on overall drinking pleasure associated with entry, give suggestions for improvement"
+          required
+        ></textarea>
+      </div>
+      <div class="score">
+        <label id="score-label" for="score"
+          >Final Score:
+          <input id="score" type="number" min="0" max="50" required />
+          /50</label
+        >
+      </div>
+      <div class="submit">
+        <button id="submit" type="submit">Submit</button>
+      </div>
+    </form>
+  </body>
+</html>
